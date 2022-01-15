@@ -19,15 +19,14 @@ int main()
               cin.ignore();
               while(t--)
               {
-                   string s;
-                   cin>>s;
-                   int sum=0;
-                   for(int i=0;i<s.length();i++)
+                   long long int n;
+                   cin>>n;
+                   for(long long int i=0;i<n;i++)
                    {
-                        if(s[i]>='0' && s[i]<='9')
-                             sum+=s[i]-'0';
+                       long long int x;
+                       cin>>x;
                    }
-                    cout<<sum;
+                       cout<<((n*(n-1))>>1);
                    cout<<'\n';
               }
 
