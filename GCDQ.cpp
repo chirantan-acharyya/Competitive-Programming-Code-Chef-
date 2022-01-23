@@ -26,14 +26,14 @@ int main()
               {
                    int n,q;
                    cin>>n>>q;
-                   int a[n+1],front[n+1],back[n+1];
+                   int a[n+10],front[n+10],back[n+10];
+                   front[0]=back[n+1]=0;
                    for(int i=1;i<=n;i++)
                    {
                          cin>>a[i];
                          front[i]=__gcd(a[i],front[i-1]);
                    }
-                   back[n]=a[n];
-                   for(int i=n-1;i>=1;i--)
+                   for(int i=n;i>=1;i--)
                    {
                          back[i]=__gcd(a[i],back[i+1]);
                    }
@@ -41,7 +41,9 @@ int main()
                    {
                          int x,y;
                          cin>>x>>y;
-                         cout<<__gcd(front[x-1],back[y+1])<<'\n';
+                         int s=0;
+                         s=__gcd(front[x-1],back[y+1]);
+                         cout<<s<<'\n';
                    }
                    cout<<'\n';
               }
